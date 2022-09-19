@@ -330,6 +330,11 @@ h2 {
   font-size: 2.3em;
 }
 
+p {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.25em;
+}
+
 /* COLOURS */
 body {
   background-color: #F1F5F2;
@@ -355,7 +360,7 @@ body {
 /* HEADER */
 header {
   display: flex;
-  margin: 1em 2em;
+  margin: 0.5em 2em;
   align-items: center;
 }
 
@@ -403,7 +408,7 @@ header img {
 
 /* LANDING IMAGE */
 .landing-image {
-  height: 100vh;
+  height: 85vh;
   background-image: url("../images/landing-image.png");
   background-size: cover;
   background-position: center;
@@ -414,11 +419,66 @@ header img {
 
 .landing-text {
   position: absolute;
-  bottom: 15px;
+  bottom: 5px;
   left: 30px;
-  margin: 0.5em;
-  padding: 0 1em;
+  padding: 1em;
   color: #F1F5F2;
-  background-color: rgba(0, 0, 0, 0.3921568627);
+  background-color: rgba(0, 0, 0, 0.4745098039);
   border-radius: 14px;
+}
+
+.landing-text h1 {
+  margin: 0;
+  font-size: clamp(1.3em, 4vw, 3em);
+}
+
+.landing-text h2 {
+  margin: 0;
+  font-size: clamp(1.2em, 4vw, 2.3em);
+}
+
+/* ABOUT US */
+.about-us {
+  display: flex;
+  margin: 4em;
+  flex-wrap: wrap;
+}
+
+.about-us-text {
+  flex: 1;
+  margin: auto;
+}
+
+.about-us-text p {
+  color: #2E2E2E;
+  padding: 2em;
+  border-left: #0D7369 solid 8px;
+  border-bottom: #0D7369 solid 8px;
+  position: relative;
+  z-index: 10;
+}
+
+.about-us-text p:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0.5px;
+  left: 0px;
+  right: 0.5px;
+  bottom: 0px;
+  border-left: #00A7A7 solid 8px;
+  border-bottom: #00A7A7 solid 8px;
+}
+
+.about-us-photo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/*ECO GROUPS*/
+.eco-groups {
+  background-color: rgba(13, 115, 105, 0.1764705882);
+  padding: 4em;
 }/*# sourceMappingURL=style.css.map */
