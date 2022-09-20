@@ -718,5 +718,46 @@ li a:hover {
   padding: 2em;
 }
 
+.informed-card{
+  max-width: 300px;
+}
+
+.informed-card h2{
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.informed-text{
+  color: #2E2E2E;
+  padding: 2em;
+  border-top: #0D7369 solid 8px;
+  border-left: #0D7369 solid 3px;
+  border-right: #0D7369 solid 3px;
+  border-bottom: #0D7369 solid 3px;
+  border-radius: 0px 0px 16px 16px;
+  position: relative;
+  z-index: 10;
+  min-height: 70px; 
+}
+
+.informed-text p:before{
+  content:"";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-top: #00A7A7 solid 8px;
+}
+
+/*ECO MEMBERS*/
+
+.eco-members{
+  background-color: #0d73692d;
+  padding: 4em;
+
+}
 
 
