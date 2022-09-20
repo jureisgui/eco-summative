@@ -697,4 +697,26 @@ li a:hover {
   flex-wrap: wrap;
 }
 
+/*KEEp INFORMED*/
+
+.keep-informed h1{
+  text-align: center;
+}
+
+.keep-informed p{
+  max-width: 1000px;
+  margin: auto;
+}
+
+.informed-cards-container{
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin: auto;
+  padding: 2em;
+}
+
+
 
