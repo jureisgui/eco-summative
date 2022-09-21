@@ -339,6 +339,11 @@ h2 {
   font-size: 2.3em;
 }
 
+h3 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2em;
+}
+
 p {
   font-family: "DM Sans", sans-serif;
   font-size: 1.25em;
@@ -829,4 +834,10 @@ li a:hover {
 footer {
   background-color: #0D7369;
   color: #F1F5F2;
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  margin-top: 0;
 }/*# sourceMappingURL=style.css.map */
