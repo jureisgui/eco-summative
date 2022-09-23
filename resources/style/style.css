@@ -406,6 +406,10 @@ body {
   background-color: #C24B4B;
 }
 
+.no-underline a:hover {
+  text-decoration: none;
+}
+
 /* HEADER */
 header {
   display: flex;
@@ -514,6 +518,7 @@ li a:hover {
 .about-us-text h1 {
   text-align: center;
   margin-bottom: 0;
+  color: #2E2E2E;
 }
 
 .about-us-text p {
@@ -563,11 +568,13 @@ li a:hover {
 
 .eco-groups h1 {
   text-align: center;
+  color: #2E2E2E;
 }
 
 .eco-groups p {
   max-width: 1000px;
   margin: auto;
+  color: #2E2E2E;
 }
 
 .ecocards-container {
@@ -593,6 +600,7 @@ li a:hover {
 .group-card p {
   margin: 0.6em;
   font-weight: 600;
+  color: #2E2E2E;
 }
 
 .img-wrapper {
@@ -625,6 +633,7 @@ li a:hover {
 
 .involved-container h2 {
   margin-top: 0;
+  color: #2E2E2E;
 }
 
 .flex-buttons {
@@ -641,11 +650,13 @@ li a:hover {
 
 .keep-informed h1 {
   text-align: center;
+  color: #2E2E2E;
 }
 
 .keep-informed p {
   max-width: 1000px;
   margin: auto;
+  color: #2E2E2E;
 }
 
 .informed-cards-container {
@@ -665,6 +676,7 @@ li a:hover {
 .informed-card h2 {
   text-align: center;
   margin-bottom: 0;
+  color: #2E2E2E;
 }
 
 .informed-text {
@@ -988,7 +1000,20 @@ footer a {
     flex-direction: column;
     padding: 2em;
   }
+  footer h3 {
+    font-size: 1.5em;
+  }
+  footer p {
+    font-size: 1em;
+  }
+  .social-icons img {
+    max-width: 30px;
+  }
   .contacts {
-    max-width: 310px;
+    max-width: 230px;
+    align-content: center;
+  }
+  .contact-item img {
+    max-width: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
