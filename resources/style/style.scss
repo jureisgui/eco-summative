@@ -275,7 +275,8 @@ li a:hover {
 
 .eco-groups{
   background-color: #0d73692d;
-  padding: 1em 4em;
+  padding: clamp(1em, 4vw, 4em);
+  margin: 0 auto;
 }
 
 .eco-groups h1 {
@@ -290,21 +291,20 @@ li a:hover {
 }
 
 .ecocards-container{
-  max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 25px;
-  justify-content: center;
-  margin: auto;
-  padding: 2em;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 2em;
 }
 
 .group-card{
-  width: 250px;
+  width: 300px;
   border-radius: 16px;
   background-color: #00a7a74d;
   text-align: center;
-  overflow: hidden;
   padding: 1em 0.5em;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
@@ -316,8 +316,7 @@ li a:hover {
 }
 
 .img-wrapper{
-  flex: 1;
-  width: 230px;
+  width: 250px;
   height: 250px;
   margin: auto;
   background-color: #F1F5F2;
@@ -338,8 +337,9 @@ li a:hover {
   border-radius: 16px;
   border: #0D7369 solid 3px;
   box-shadow: 5px 5px 5px #0D7369;
-  max-width: 400px;
+  max-width: 600px;
   margin: auto;
+  grid-column: span 2;
 }
 
 .involved-container h2{
@@ -355,7 +355,6 @@ li a:hover {
 }
 
 /*KEEP INFORMED*/
-
 .keep-informed{
   margin: 2em;
 }
@@ -418,7 +417,6 @@ li a:hover {
 }
 
 /*ECO MEMBERS*/
-
 .eco-members{
   background-color: #0d73692d;
   padding: 4em;
@@ -430,7 +428,9 @@ li a:hover {
   position: relative;
   overflow: hidden;
   padding: 20px;
-  margin: 1em;
+  margin: 2em auto;
+  max-width: 1100px;
+  text-align: center;
 }
 
 .members-container {
@@ -438,6 +438,7 @@ li a:hover {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
+
 }
 
 .members-container::-webkit-scrollbar {
@@ -456,13 +457,11 @@ li a:hover {
 
 .member-image {
   position: relative;
-  // width: 100%;
   max-width: 350px;
   max-height: 350px;
   overflow: hidden;
   align-items: center;
   padding: 1em;
-
 }
 
 .member-thumb {
@@ -471,10 +470,6 @@ li a:hover {
   object-fit: scale-down;
   align-items: center;
 }
-
-// .member-card:hover {
-//   opacity: 1;
-// }
 
 .pre-btn,
 .nxt-btn {
@@ -511,13 +506,12 @@ li a:hover {
   opacity: 1;
 }
 
-
 /* DONATE BANNER */
 
 .donation-banner{
   display: flex;
   background-color: #0D7368;
-  max-width: 1300px;
+  max-width: 1100px;
   margin: auto;
   justify-content: space-evenly;
   border-radius: 16px;
@@ -634,125 +628,132 @@ footer a{
   padding: 1em;
   }
 
-  /* responsive nav */
+/* responsive nav */
+.burger {
+  display: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.line {
+  height: 5px;
+  width: 60px;
+  margin: 0.4rem 0;
+  background: #0D7369;
+  border-radius: 16px;
+  transition: transform 0.75s ease, opacity 0.75s ease;
+}
+
+.main-nav.show .line1 {
+  transform: translate(-10px) rotate(45deg) translate(25px);
+}
+.main-nav.show .line2 {
+  opacity: 0;
+}
+.main-nav.show .line3 {
+  transform: translate(-10px) rotate(-45deg) translate(25px);
+}
+.main-nav.show .nav-links {
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 1300px) {
+
+/* ABOUT US */
+.about-us{
+  flex-direction: column;
+  padding: 2em;
+}
+
+.ecocards-container{
+  max-width: 850px;
+  grid-template-columns: 1fr 1fr;    
+}
+
+.keep-informed p{
+  margin: 0 2em;
+}
+
+.eco-members{
+  padding: 0.5em 3em;
+}    
+}
+
+@media screen and (max-width: 1000px) {
+
+  /* BURGER MENU */
   .burger {
-    display: none;
-    padding: 0.5rem;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
-  .line {
-    height: 5px;
-    width: 60px;
-    margin: 0.4rem 0;
-    background: #0D7369;
-    border-radius: 16px;
-    transition: transform 0.75s ease, opacity 0.75s ease;
-  }
-  
-  .main-nav.show .line1 {
-    transform: translate(-10px) rotate(45deg) translate(25px);
-  }
-  .main-nav.show .line2 {
-    opacity: 0;
-  }
-  .main-nav.show .line3 {
-    transform: translate(-10px) rotate(-45deg) translate(25px);
-  }
-  .main-nav.show .nav-links {
-    transform: translateX(0%);
-  }
+  .nav-links {
+    position: fixed;
+    top: 18vh;
+    right: 0;
+    height: 70vh;
+    width: 44%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #00A7A7;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+    padding-top: 2em;
+    z-index: 99;
+  } 
 
-  @media screen and (max-width: 1300px) {
+  // OTHER RESPONSIVENESS
 
-    /*ABOUT US*/
-    .about-us{
-      flex-direction: column;
-      padding: 2em;
-    }
-
-    .eco-groups{
-      padding: 0.5em 3em;
-    }
-
-    .ecocards-container{
-      max-width: 850px;
-    
+  .donation-banner{
+    flex-direction: column;
   }
 
-    .keep-informed p{
-      margin: 0 2em;
-    }
+  .banner-image{
+    flex: 1;
+    max-width: 900px;
+  }
 
-    .eco-members{
-      padding: 0.5em 3em;
-    }
+  .banner-image img{
+    border-radius: 0px 0px 16px 16px;
+  }
 
-    
+  footer{
+    flex-direction: column;
+    padding: 2em;
+  }
+
+  footer h3{
+    font-size: 1.5em;
+  }
+  footer p{
+    font-size: 1em;
+  }
+
+  .social-icons img{
+    max-width: 30px;
+  }
+
+  .contacts{
+    max-width: 230px;
+    align-content: center;
+  }
+
+  .contact-item img{
+    max-width: 30px;
+  }
 
 }
-  @media screen and (max-width: 1000px) {
 
-    /* BURGER MENU */
-    .burger {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+@media screen and (max-width: 715px) {
+  .ecocards-container{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;    
+}
+}
 
-    }
-    .nav-links {
-      position: fixed;
-      top: 18vh;
-      right: 0;
-      height: 70vh;
-      width: 44%;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      background: #00A7A7;
-      transform: translateX(100%);
-      transition: transform 1s ease;
-      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
-      padding-top: 2em;
-      z-index: 99;
-    } 
 
-    .donation-banner{
-      flex-direction: column;
-    }
-
-    .banner-image{
-      flex: 1;
-      max-width: 900px;
-    }
-
-    .banner-image img{
-      border-radius: 0px 0px 16px 16px;
-    }
-
-    footer{
-      flex-direction: column;
-      padding: 2em;
-    }
-
-    footer h3{
-      font-size: 1.5em;
-    }
-    footer p{
-      font-size: 1em;
-    }
-
-    .social-icons img{
-      max-width: 30px;
-    }
-
-    .contacts{
-      max-width: 230px;
-      align-content: center;
-    }
-
-    .contact-item img{
-      max-width: 30px;
-    }
-
-  }
+  

@@ -261,7 +261,8 @@ li a:hover {
 /*ECO GROUPS*/
 .eco-groups {
   background-color: rgba(13, 115, 105, 0.1764705882);
-  padding: 1em 4em;
+  padding: clamp(1em, 4vw, 4em);
+  margin: 0 auto;
 }
 
 .eco-groups h1 {
@@ -276,21 +277,20 @@ li a:hover {
 }
 
 .ecocards-container {
-  max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 25px;
-  justify-content: center;
-  margin: auto;
-  padding: 2em;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 2em;
 }
 
 .group-card {
-  width: 250px;
+  width: 300px;
   border-radius: 16px;
   background-color: rgba(0, 167, 167, 0.3019607843);
   text-align: center;
-  overflow: hidden;
   padding: 1em 0.5em;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
@@ -302,8 +302,7 @@ li a:hover {
 }
 
 .img-wrapper {
-  flex: 1;
-  width: 230px;
+  width: 250px;
   height: 250px;
   margin: auto;
   background-color: #F1F5F2;
@@ -325,8 +324,9 @@ li a:hover {
   border-radius: 16px;
   border: #0D7369 solid 3px;
   box-shadow: 5px 5px 5px #0D7369;
-  max-width: 400px;
+  max-width: 600px;
   margin: auto;
+  grid-column: span 2;
 }
 
 .involved-container h2 {
@@ -414,7 +414,9 @@ li a:hover {
   position: relative;
   overflow: hidden;
   padding: 20px;
-  margin: 1em;
+  margin: 2em auto;
+  max-width: 1100px;
+  text-align: center;
 }
 
 .members-container {
@@ -494,7 +496,7 @@ li a:hover {
 .donation-banner {
   display: flex;
   background-color: #0D7368;
-  max-width: 1300px;
+  max-width: 1100px;
   margin: auto;
   justify-content: space-evenly;
   border-radius: 16px;
@@ -643,16 +645,14 @@ footer a {
 }
 
 @media screen and (max-width: 1300px) {
-  /*ABOUT US*/
+  /* ABOUT US */
   .about-us {
     flex-direction: column;
     padding: 2em;
   }
-  .eco-groups {
-    padding: 0.5em 3em;
-  }
   .ecocards-container {
     max-width: 850px;
+    grid-template-columns: 1fr 1fr;
   }
   .keep-informed p {
     margin: 0 2em;
@@ -713,5 +713,12 @@ footer a {
   }
   .contact-item img {
     max-width: 30px;
+  }
+}
+@media screen and (max-width: 715px) {
+  .ecocards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
