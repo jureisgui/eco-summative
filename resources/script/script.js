@@ -1,3 +1,4 @@
+// burger menu
 document.addEventListener('DOMContentLoaded', nav)
 function nav(){
     const burger = document.querySelector('.burger');
@@ -7,6 +8,7 @@ function nav(){
     })
 }
 
+// Members carousel
 const memberContainers = [...document.querySelectorAll('.members-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
@@ -26,3 +28,12 @@ memberContainers.forEach((item, i) => {
 });
 
 window.onresize = function(){ location.reload(); }
+
+// donation banner behaviour
+const donationCards = document.querySelectorAll('.donation-card');
+
+donationCards.forEach(function(card) {
+  card.addEventListener('click', function() {
+    card.classList.toggle('active');
+  });
+});
