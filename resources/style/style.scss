@@ -307,6 +307,7 @@ li a:hover {
   text-align: center;
   padding: 1em 0.5em;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
 }
 
 .group-card p{
@@ -382,6 +383,7 @@ li a:hover {
 
 .informed-card{
   max-width: 300px;
+  cursor: pointer;
 }
 
 .informed-card h2{
