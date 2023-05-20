@@ -34,6 +34,12 @@ const donationCards = document.querySelectorAll('.donation-card');
 
 donationCards.forEach(function(card) {
   card.addEventListener('click', function() {
-    card.classList.toggle('active');
+    // Remove 'active' class from all donation cards
+    donationCards.forEach(function(card) {
+      card.classList.remove('active');
+    });
+    
+    // Add 'active' class to the clicked donation card
+    card.classList.add('active');
   });
 });

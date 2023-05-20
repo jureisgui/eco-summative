@@ -518,6 +518,7 @@ li a:hover {
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 
 .donation-card {
